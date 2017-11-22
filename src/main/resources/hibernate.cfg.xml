@@ -4,6 +4,7 @@
 "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
+        <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mkyong</property>
         <property name="hibernate.connection.username">root</property>
@@ -11,6 +12,6 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.default_schema">MKYONG</property>
         <property name="show_sql">true</property>
-        <mapping resource="com/mkyong/user/DBUser.hbm.xml"></mapping>
+        <mapping class="com.mkyong.user.DBUser"></mapping>
     </session-factory>
 </hibernate-configuration>
