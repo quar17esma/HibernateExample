@@ -18,5 +18,6 @@
         <mapping class="com.mkyong.stock.StockDetail" />
         <mapping class="com.mkyong.stock.StockDailyRecord" />
         <mapping class="com.mkyong.stock.Category" />
+        <mapping class="com.mkyong.avatar.Avatar" />
     </session-factory>
 </hibernate-configuration>
