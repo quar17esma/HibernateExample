@@ -3,6 +3,8 @@ package com.mkyong.stock;
 import javax.persistence.*;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
@@ -16,6 +18,7 @@ public class Stock implements Serializable {
     private String stockCode;
     private String stockName;
     private StockDetail stockDetail;
+    private Set<StockDailyRecord> stockDailyRecords = new HashSet<StockDailyRecord>(0);
 
     public Stock() {
     }
@@ -29,6 +32,14 @@ public class Stock implements Serializable {
         this.stockCode = stockCode;
         this.stockName = stockName;
         this.stockDetail = stockDetail;
+    }
+
+    public Stock(String stockCode, String stockName, StockDetail stockDetail,
+                 Set<StockDailyRecord> stockDailyRecords) {
+        this.stockCode = stockCode;
+        this.stockName = stockName;
+        this.stockDetail = stockDetail;
+        this.stockDailyRecords = stockDailyRecords;
     }
 
     @Id
@@ -67,6 +78,15 @@ public class Stock implements Serializable {
 
     public void setStockDetail(StockDetail stockDetail) {
         this.stockDetail = stockDetail;
+    }
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "stock")
+    public Set<StockDailyRecord> getStockDailyRecords() {
+        return this.stockDailyRecords;
+    }
+
+    public void setStockDailyRecords(Set<StockDailyRecord> stockDailyRecords) {
+        this.stockDailyRecords = stockDailyRecords;
     }
 
 }
