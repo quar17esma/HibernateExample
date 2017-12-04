@@ -19,6 +19,7 @@ public class Stock implements Serializable {
     private String stockName;
     private StockDetail stockDetail;
     private Set<StockDailyRecord> stockDailyRecords = new HashSet<StockDailyRecord>(0);
+    private Set<Category> categories = new HashSet<Category>(0);
 
     public Stock() {
     }
@@ -87,6 +88,19 @@ public class Stock implements Serializable {
 
     public void setStockDailyRecords(Set<StockDailyRecord> stockDailyRecords) {
         this.stockDailyRecords = stockDailyRecords;
+    }
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "stock_category", joinColumns = {
+            @JoinColumn(name = "STOCK_ID", nullable = false, updatable = false) },
+            inverseJoinColumns = { @JoinColumn(name = "CATEGORY_ID",
+                    nullable = false, updatable = false) })
+    public Set<Category> getCategories() {
+        return this.categories;
+    }
+
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
     }
 
 }
