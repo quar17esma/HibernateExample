@@ -1,9 +1,9 @@
 package com.mkyong;
 
-import com.mkyong.stock.Category;
-import com.mkyong.stock.Stock;
-import com.mkyong.stock.StockDailyRecord;
-import com.mkyong.stock.StockDetail;
+import com.mkyong.model.stock.Category;
+import com.mkyong.model.stock.Stock;
+import com.mkyong.model.stock.StockDailyRecord;
+import com.mkyong.model.stock.StockDetail;
 import com.mkyong.util.HibernateUtil;
 import org.hibernate.Session;
 

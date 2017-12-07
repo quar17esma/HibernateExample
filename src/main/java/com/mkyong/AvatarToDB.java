@@ -1,6 +1,6 @@
 package com.mkyong;
 
-import com.mkyong.avatar.Avatar;
+import com.mkyong.model.avatar.Avatar;
 import com.mkyong.util.HibernateUtil;
 import org.hibernate.Session;
 

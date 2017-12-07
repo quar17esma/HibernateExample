@@ -13,11 +13,11 @@
         <property name="hibernate.default_schema">MKYONG</property>
         <property name="show_sql">true</property>
 
-        <mapping class="com.mkyong.user.DBUser" />
-        <mapping class="com.mkyong.stock.Stock" />
-        <mapping class="com.mkyong.stock.StockDetail" />
-        <mapping class="com.mkyong.stock.StockDailyRecord" />
-        <mapping class="com.mkyong.stock.Category" />
-        <mapping class="com.mkyong.avatar.Avatar" />
+        <mapping class="com.mkyong.model.user.DBUser" />
+        <mapping class="com.mkyong.model.stock.Stock" />
+        <mapping class="com.mkyong.model.stock.StockDetail" />
+        <mapping class="com.mkyong.model.stock.StockDailyRecord" />
+        <mapping class="com.mkyong.model.stock.Category" />
+        <mapping class="com.mkyong.model.avatar.Avatar" />
     </session-factory>
 </hibernate-configuration>

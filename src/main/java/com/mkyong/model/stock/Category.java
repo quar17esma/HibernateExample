@@ -1,4 +1,4 @@
-package com.mkyong.stock;
+package com.mkyong.model.stock;
 
 import javax.persistence.*;
 import java.io.Serializable;

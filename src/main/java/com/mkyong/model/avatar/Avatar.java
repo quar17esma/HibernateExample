@@ -1,4 +1,4 @@
-package com.mkyong.avatar;
+package com.mkyong.model.avatar;
 
 import javax.persistence.*;
 import java.io.Serializable;

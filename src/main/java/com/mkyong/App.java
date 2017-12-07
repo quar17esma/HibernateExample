@@ -1,11 +1,8 @@
 package com.mkyong;
 
-import java.util.Date;
 import org.hibernate.Session;
 import com.mkyong.util.HibernateUtil;
-import com.mkyong.user.DBUser;
-
-import javax.transaction.UserTransaction;
+import com.mkyong.model.user.DBUser;
 
 public class App {
 	public static void main(String[] args) {

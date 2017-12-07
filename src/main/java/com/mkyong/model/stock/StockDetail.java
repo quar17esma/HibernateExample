@@ -1,4 +1,4 @@
-package com.mkyong.stock;
+package com.mkyong.model.stock;
 
 import org.hibernate.annotations.*;
 import org.hibernate.annotations.Parameter;
